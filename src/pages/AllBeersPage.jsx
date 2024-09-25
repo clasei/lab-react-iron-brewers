@@ -13,12 +13,12 @@ function AllBeersPage() {
   // TASKS:
   // 1. Set up an effect hook to make a request to the Beers API and get a list with all the beers.
   useEffect(() => {
-
+    // 2. Use axios to make a HTTP request.
     axios.get(`${import.meta.env.VITE_BEERS_API}`)
 
     .then(({data}) => {
       console.log(data)
-
+      // 3. Use the response data from the Beers API to update the state variable.
       setBeers(data)
 
     })
@@ -27,9 +27,6 @@ function AllBeersPage() {
       console.log(err)
     })
   }, [])
-
-  // 2. Use axios to make a HTTP request.
-  // 3. Use the response data from the Beers API to update the state variable.
 
 
 
